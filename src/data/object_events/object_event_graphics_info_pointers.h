@@ -248,6 +248,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Zubat;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Diglett;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_OldMan2;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Celio;
+const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Magnus;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SSAqua;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SurfingPikachuDoll;
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BulbasaurDoll;
@@ -524,6 +525,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[] =
     [OBJ_EVENT_GFX_DIGLETT] =                  &gObjectEventGraphicsInfo_Diglett,
     [OBJ_EVENT_GFX_OLD_MAN_2] =                &gObjectEventGraphicsInfo_OldMan2,
     [OBJ_EVENT_GFX_CELIO] =                    &gObjectEventGraphicsInfo_Celio,
+    [OBJ_EVENT_GFX_MAGNUS] =                    &gObjectEventGraphicsInfo_Magnus,
     [OBJ_EVENT_GFX_SS_AQUA] =                  &gObjectEventGraphicsInfo_SSAqua,
     [OBJ_EVENT_GFX_ZSURFING_PIKACHU_DOLL] =    &gObjectEventGraphicsInfo_SurfingPikachuDoll,
     [OBJ_EVENT_GFX_ZBULBASAUR_DOLL] =          &gObjectEventGraphicsInfo_BulbasaurDoll,

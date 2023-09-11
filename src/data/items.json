@@ -6570,6 +6570,22 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
-    }
+    },
+    {
+      "english": "LINKBRACELET",
+      "itemId": "ITEM_LINK_BRACELET",
+      "price": 100,
+      "holdEffect": "HOLD_EFFECT_NONE",
+      "holdEffectParam": 0,
+      "description_english": "An amazing new invention.\\nWearing it makes certain species of\\nPOKéMON evolve.",
+      "importance": 0,
+      "exitsBagOnUse": 0,
+      "pocket": "POCKET_KEY_ITEMS",
+      "type": 1,
+      "fieldUseFunc": "ItemUseOutOfBattle_EvolutionStone",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
+    }    
   ]
 }

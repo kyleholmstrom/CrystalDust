@@ -736,8 +736,11 @@
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
+
+// Linkbracelet Flags
+#define FLAG_HIDE_MAGNUS                           0x2B9
+#define FLAG_GOLDENROD_CITY_MAGNUS_ASKING                         0x2BA
+
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 
 // Event Flags

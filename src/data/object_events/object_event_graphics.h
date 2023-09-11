@@ -353,6 +353,7 @@ const u32 gObjectEventPic_Zubat[] = INCBIN_U32("graphics/object_events/pics/poke
 const u32 gObjectEventPic_Diglett[] = INCBIN_U32("graphics/object_events/pics/pokemon/diglett.4bpp");
 const u32 gObjectEventPic_OldMan2[] = INCBIN_U32("graphics/object_events/pics/people/old_man_2.4bpp");
 const u32 gObjectEventPic_Celio[] = INCBIN_U32("graphics/object_events/pics/people/celio.4bpp");
+const u32 gObjectEventPic_Magnus[] = INCBIN_U32("graphics/object_events/pics/people/magnus.4bpp");
 const u32 gObjectEventPic_SSAqua[] = INCBIN_U32("graphics/object_events/pics/misc/ss_aqua.4bpp");
 const u16 gObjectEventPal_SSAqua[] = INCBIN_U16("graphics/object_events/pics/misc/ss_aqua.gbapal");
 const u32 gObjectEventPic_SurfingPikachuDoll[] = INCBIN_U32("graphics/object_events/pics/dolls/surfing_pikachu_doll.4bpp");
