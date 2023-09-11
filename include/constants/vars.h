@@ -163,7 +163,7 @@
 #define VAR_GOLDENROD_GYM_STATE              0x408E
 #define VAR_GOLDENROD_DEPT_STORE_B1F_LAYOUT  0x408F
 #define VAR_BRINEY_HOUSE_STATE               0x4090
-#define VAR_UNUSED_0x4091                    0x4091 // Unused Var
+#define VAR_REPEL_LAST_USED                  0x4091
 #define VAR_LITTLEROOT_INTRO_STATE           0x4092
 #define VAR_MAUVILLE_GYM_STATE               0x4093
 #define VAR_LILYCOVE_MUSEUM_2F_STATE         0x4094
