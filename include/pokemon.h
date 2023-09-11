@@ -238,6 +238,7 @@ struct Evolution
     u16 method;
     u16 param;
     u16 targetSpecies;
+    u16 param2;
 };
 
 extern bool8 gDebugForceShiny;

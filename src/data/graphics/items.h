@@ -817,3 +817,6 @@ const u32 gItemIconPalette_RageCandyBar[] = INCBIN_U32("graphics/items/icon_pale
 
 const u32 gItemIcon_SlowpokeTail[] = INCBIN_U32("graphics/items/icons/slowpoke_tail.4bpp.lz");
 const u32 gItemIconPalette_SlowpokeTail[] = INCBIN_U32("graphics/items/icon_palettes/slowpoke_tail.gbapal.lz");
+
+const u32 gItemIcon_LinkBracelet[] = INCBIN_U32("graphics/items/icons/link_bracelet.4bpp.lz");
+const u32 gItemIconPalette_LinkBracelet[] = INCBIN_U32("graphics/items/icon_palettes/link_bracelet.gbapal.lz");
