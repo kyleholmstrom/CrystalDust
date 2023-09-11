@@ -5138,7 +5138,7 @@ extern const u32 gKantoTrainerCardBack_Tilemap[];
 extern const u32 gJohtoTrainerCardBack_Tilemap[];
 extern const u32 gHoennTrainerCardFront_Tilemap[];
 extern const u32 gKantoTrainerCardFront_Tilemap[];
-extern const u32 gJohtoTrainerCardBack_Tilemap[];
+extern const u32 gJohtoTrainerCardFront_Tilemap[];
 extern const u32 gHoennTrainerCardFrontLink_Tilemap[];
 extern const u32 gKantoTrainerCardFrontLink_Tilemap[];
 extern const u32 gJohtoTrainerCardFrontLink_Tilemap[];
