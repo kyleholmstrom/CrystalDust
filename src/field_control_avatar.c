@@ -41,6 +41,7 @@
 #include "constants/metatile_behaviors.h"
 #include "constants/songs.h"
 #include "constants/trainer_hill.h"
+#include "constants/items.h"
 
 static EWRAM_DATA u8 sWildEncounterImmunitySteps = 0;
 static EWRAM_DATA u16 sPreviousPlayerMetatileBehavior = 0;
@@ -573,7 +574,7 @@ static const u8 *GetInteractedWaterScript(struct MapPosition *unused1, u8 metati
     if (PartyHasMonWithHeadbutt() && MetatileBehavior_IsHeadbuttTree(metatileBehavior) == TRUE)
         return EventScript_HeadbuttTree;
 
-    if (FlagGet(FLAG_BADGE04_GET) == TRUE && PartyHasMonWithSurf() == TRUE && IsPlayerFacingSurfableFishableWater() == TRUE)
+    if ((FlagGet(FLAG_BADGE04_GET) == TRUE || PartyHasMonWithSurf() == TRUE || CheckBagHasItem(ITEM_HM03 ,1)) && IsPlayerFacingSurfableFishableWater() == TRUE)
         return EventScript_UseSurf;
 
     if (MetatileBehavior_IsWaterfall(metatileBehavior) == TRUE)
