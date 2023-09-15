@@ -1267,45 +1267,46 @@
 #define FLAG_BUG_CATCHING_CONTEST_WADE_FORCED_CALL					0x4A5
 #define FLAG_BUG_CATCHING_CONTEST_DEREK_FORCED_CALL                 0x4A6
 
-#define FLAG_UNUSED_0x4A7                                           0x4A7 // Unused Flag
-#define FLAG_UNUSED_0x4A8                                           0x4A8 // Unused Flag
-#define FLAG_UNUSED_0x4A9                                           0x4A9 // Unused Flag
-#define FLAG_UNUSED_0x4AA                                           0x4AA // Unused Flag
-#define FLAG_UNUSED_0x4AB                                           0x4AB // Unused Flag
-#define FLAG_UNUSED_0x4AC                                           0x4AC // Unused Flag
-#define FLAG_UNUSED_0x4AD                                           0x4AD // Unused Flag
-#define FLAG_UNUSED_0x4AE                                           0x4AE // Unused Flag
-#define FLAG_UNUSED_0x4AF                                           0x4AF // Unused Flag
-#define FLAG_UNUSED_0x4B0                                           0x4B0 // Unused Flag
-#define FLAG_UNUSED_0x4B1                                           0x4B1 // Unused Flag
-#define FLAG_UNUSED_0x4B2                                           0x4B2 // Unused Flag
-#define FLAG_UNUSED_0x4B3                                           0x4B3 // Unused Flag
-#define FLAG_UNUSED_0x4B4                                           0x4B4 // Unused Flag
-#define FLAG_UNUSED_0x4B5                                           0x4B5 // Unused Flag
-#define FLAG_UNUSED_0x4B6                                           0x4B6 // Unused Flag
-#define FLAG_UNUSED_0x4B7                                           0x4B7 // Unused Flag
-#define FLAG_UNUSED_0x4B8                                           0x4B8 // Unused Flag
-#define FLAG_UNUSED_0x4B9                                           0x4B9 // Unused Flag
-#define FLAG_UNUSED_0x4BA                                           0x4BA // Unused Flag
-#define FLAG_UNUSED_0x4BB                                           0x4BB // Unused Flag
-#define FLAG_UNUSED_0x4BC                                           0x4BC // Unused Flag
-#define FLAG_UNUSED_0x4BD                                           0x4BD // Unused Flag
-#define FLAG_UNUSED_0x4BE                                           0x4BE // Unused Flag
-#define FLAG_UNUSED_0x4BF                                           0x4BF // Unused Flag
-#define FLAG_UNUSED_0x4C0                                           0x4C0 // Unused Flag
-#define FLAG_UNUSED_0x4C1                                           0x4C1 // Unused Flag
-#define FLAG_UNUSED_0x4C2                                           0x4C2 // Unused Flag
-#define FLAG_UNUSED_0x4C3                                           0x4C3 // Unused Flag
-#define FLAG_UNUSED_0x4C4                                           0x4C4 // Unused Flag
-#define FLAG_UNUSED_0x4C5                                           0x4C5 // Unused Flag
-#define FLAG_UNUSED_0x4C6                                           0x4C6 // Unused Flag
-#define FLAG_UNUSED_0x4C7                                           0x4C7 // Unused Flag
-#define FLAG_UNUSED_0x4C8                                           0x4C8 // Unused Flag
-#define FLAG_UNUSED_0x4C9                                           0x4C9 // Unused Flag
-#define FLAG_UNUSED_0x4CA                                           0x4CA // Unused Flag
-#define FLAG_UNUSED_0x4CB                                           0x4CB // Unused Flag
-#define FLAG_UNUSED_0x4CC                                           0x4CC // Unused Flag
-#define FLAG_UNUSED_0x4CD                                           0x4CD // Unused Flag
+#define FLAG_TREE_CELADON_CITY                                      0x4A7
+#define FLAG_TREE_FUCHSIA_CITY_1                                    0x4A8
+#define FLAG_TREE_FUCHSIA_CITY_2                                    0x4A9
+#define FLAG_TREE_ILEX_FOREST                                       0x4AA
+#define FLAG_TREE_LAKE_OF_RAGE_1                                    0x4AB
+#define FLAG_TREE_LAKE_OF_RAGE_2                                    0x4AC
+#define FLAG_TREE_LAKE_OF_RAGE_3                                    0x4AD
+#define FLAG_TREE_LAKE_OF_RAGE_4                                    0x4AE
+#define FLAG_TREE_LAKE_OF_RAGE_5                                    0x4AF
+#define FLAG_TREE_PEWTER_CITY                                       0x4B0
+#define FLAG_TREE_ROUTE_12_1                                        0x4B1
+#define FLAG_TREE_ROUTE_12_2                                        0x4B2
+#define FLAG_TREE_ROUTE_13                                          0x4B3
+#define FLAG_TREE_ROUTE_14_1                                        0x4B4
+#define FLAG_TREE_ROUTE_14_2                                        0x4B5
+#define FLAG_TREE_ROUTE_14_3                                        0x4B6
+#define FLAG_TREE_ROUTE_16                                          0x4B7
+#define FLAG_TREE_ROUTE_2_1                                         0x4B8
+#define FLAG_TREE_ROUTE_2_2                                         0x4B9
+#define FLAG_TREE_ROUTE_2_3                                         0x4BA
+#define FLAG_TREE_ROUTE_2_4                                         0x4BB
+#define FLAG_TREE_ROUTE_25                                          0x4BC
+#define FLAG_TREE_ROUTE_29_1                                        0x4BD
+#define FLAG_TREE_ROUTE_29_2                                        0x4BE
+#define FLAG_TREE_ROUTE_30                                          0x4BF
+#define FLAG_TREE_ROUTE_31_1                                        0x4C0
+#define FLAG_TREE_ROUTE_31_2                                        0x4C1
+#define FLAG_TREE_ROUTE_32                                          0x4C2
+#define FLAG_TREE_ROUTE_35                                          0x4C3
+#define FLAG_TREE_ROUTE_42                                          0x4C4
+#define FLAG_TREE_ROUTE_8_1                                         0x4C5
+#define FLAG_TREE_ROUTE_8_2                                         0x4C6
+#define FLAG_TREE_ROUTE_9                                           0x4C7
+#define FLAG_TREE_SILVER_CAVE_OUTSIDE_1                             0x4C8
+#define FLAG_TREE_SILVER_CAVE_OUTSIDE_2                             0x4C9
+#define FLAG_TREE_VERMILLION_CITY                                   0x4CA
+#define FLAG_TREE_VIOLET_CITY                                       0x4CB
+#define FLAG_TREE_VIRIDIAN_CITY_1                                   0x4CC
+#define FLAG_TREE_VIRIDIAN_CITY_2                                   0x4CD
+
 #define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
