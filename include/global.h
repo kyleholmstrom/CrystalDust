@@ -129,6 +129,11 @@
 #define DEX_FLAGS_NO (ROUND_BITS_TO_BYTES(NUM_SPECIES))
 #define NUM_FLAG_BYTES (ROUND_BITS_TO_BYTES(FLAGS_COUNT))
 
+#define EXP_NORMAL       0
+#define EXP_HALF         1
+#define EXP_ONEANDHALF   2
+#define EXP_DOUBLE       3
+
 struct Coords8
 {
     s8 x;

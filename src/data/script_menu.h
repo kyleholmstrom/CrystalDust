@@ -1074,6 +1074,14 @@ static const struct MenuAction MultichoiceList_GameCornerTutor[] =
     { gText_Cancel2 },
 };
 
+static const struct MenuAction MultichoiceList_ExpMod[] = 
+{
+    {(const u8[])_("0.5x")},
+    {(const u8[])_("1.0x")},
+    {(const u8[])_("1.5x")},
+    {(const u8[])_("2.0x")},
+};
+
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -1239,6 +1247,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_DOME_AMBER_ROOT_CLAW]       = MULTICHOICE(MultichoiceList_DomeAmberRootClaw),
     [MULTI_HELIX_DOME_AMBER_ROOT_CLAW] = MULTICHOICE(MultichoiceList_HelixDomeAmberRootClaw),
     [MULTI_GAME_CORNER_TUTOR]          = MULTICHOICE(MultichoiceList_GameCornerTutor),
+    [MULTI_EXP_MOD]                    = MULTICHOICE(MultichoiceList_ExpMod),
 };
 
 const u8 *const gStdStrings[] =
