@@ -51,18 +51,18 @@ script NewBarkTown_EventScript_ElmsHouse{
 }
 
 script NewBarkTown_EventScript_Exp_Mod{
-    message("Set Exp. Multiplier.")
+    message("Choose an Experience\nMultiplier.")
     waitmessage
     switch(var(VAR_EXP_MOD))
     {
         case 0:
-            multichoicedefault(20, 6, MULTI_EXP_MOD, 1, FALSE)
+            multichoicedefault(20, 3, MULTI_EXP_MOD, 1, FALSE)
         case 1:
-            multichoicedefault(20, 6, MULTI_EXP_MOD, 0, FALSE)
+            multichoicedefault(20, 3, MULTI_EXP_MOD, 0, FALSE)
         case 2:
-            multichoicedefault(20, 6, MULTI_EXP_MOD, 2, FALSE)
+            multichoicedefault(20, 3, MULTI_EXP_MOD, 2, FALSE)
         case 3:
-            multichoicedefault(20, 6, MULTI_EXP_MOD, 3, FALSE)
+            multichoicedefault(20, 3, MULTI_EXP_MOD, 3, FALSE)
     }
     switch(var(VAR_RESULT)) 
     {  
@@ -88,20 +88,26 @@ script NewBarkTown_EventScript_Exp_Mod{
 }
 
 script NewBarkTown_EventScript_TypeEffect{
-    message("Show Type Effectiveness\n"
-             "in battle?")
+    message("Choose Type Effectiveness\n"
+             "setting.")
     waitmessage
-    multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 0, FALSE)
+    switch(var(VAR_TYPE_EFFECTIVENESS))
+    {
+        case 0:
+            multichoicedefault(20, 3, MULTI_TYPE_EFFECT, 0, FALSE)
+        case 1:
+            multichoicedefault(20, 3, MULTI_TYPE_EFFECT, 1, FALSE)
+    }
     switch (var(VAR_RESULT))
     {
         case 0:
 			msgbox("Type effectiveness will\n"
 					"be displayed.")
-			setflag(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW)
+			setvar(VAR_TYPE_EFFECTIVENESS, 0)
         case 1:
 			msgbox("Type effectiveness will\n"
 					"not be displayed.")
-			clearflag(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW)
+			setvar(VAR_TYPE_EFFECTIVENESS, 1)
         case 2:
 			goto(NewBarkTown_EventScript_EndModList)
         case MULTI_B_PRESSED:

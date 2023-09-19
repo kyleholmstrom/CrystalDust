@@ -1307,7 +1307,7 @@
 #define FLAG_TREE_VIRIDIAN_CITY_1                                   0x4CC
 #define FLAG_TREE_VIRIDIAN_CITY_2                                   0x4CD
 
-#define FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW                         0x4CE
+#define FLAG_UNUSED_0x4CE                                           0x4CE // Unused Flag
 #define FLAG_UNUSED_0x4CF                                           0x4CF // Unused Flag
 #define FLAG_UNUSED_0x4D0                                           0x4D0 // Unused Flag
 #define FLAG_UNUSED_0x4D1                                           0x4D1 // Unused Flag

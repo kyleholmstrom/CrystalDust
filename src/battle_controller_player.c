@@ -1534,7 +1534,7 @@ u8 TypeEffectiveness(u8 targetId)
 {
     u8 moveFlags;
     u16 move;
-    if (FlagGet(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW) == FALSE){
+    if (VarGet(VAR_TYPE_EFFECTIVENESS) == 1){
         return 10;
     }
     move = gBattleMons[gActiveBattler].moves[gMoveSelectionCursor[gActiveBattler]];
