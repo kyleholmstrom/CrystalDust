@@ -245,120 +245,61 @@ script GoldenrodCity_EventScript_RocketGrunt6 {
            "TEAM ROCKET!", MSGBOX_NPC)
 }
 
-script GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger{
+script GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger {
     lock
     applymovement(16, Common_Movement_ExclamationMark)
     waitmovement(0)
     playbgm(MUS_MOMS_THEME, 0)
-    applymovement (16, GoldenrodCity_MagnusWalkDown1)
-    waitmovement(0)
-    turnobject(16, DIR_WEST)
-    msgbox("Hey, you!")
-    closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight)
-    waitmovement(0)
-    applymovement(16, Common_Movement_Delay48)
-    waitmovement(0)
-    applymovement(16, GoldenrodCity_MagnusWalkToPlayer)
-    waitmovement(0)
-    msgbox("You... You must be the kid who\nsaved the RADIO TOWER!\pMy name's MAGNUS. I'm Goldenrod\nCity's top scientist.\pAs a token of my gratitude, I'd like\nto give you my latest invention.\pSome POKéMON don't evolve until\nthey have been traded to another\ltrainer.\pWhen those POKéMON wear this\nLINKBRACELET, they should evolve\lon their own.\pPlease take it and try it out!", MSGBOX_DEFAULT)
-    giveitem(ITEM_LINK_BRACELET)
-    msgbox("I hope you put it to good use!", MSGBOX_DEFAULT)
-    applymovement(16, GoldenrodCity_MagnusWalkAwayFromPlayer)
-    waitmovement(0)
-    turnobject(16, DIR_SOUTH)
-    savebgm(MUS_DUMMY)
-	fadedefaultbgm
-    release
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING2, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING3, 2)
-}
-script GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger2{
-    lock
-    applymovement(16, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    playbgm(MUS_MOMS_THEME, 0)
-    applymovement (16, GoldenrodCity_MagnusWalkDown2)
-    waitmovement(0)
-    turnobject(16, DIR_WEST)
-    msgbox("Hey, you!")
-    closemessage
-    applymovement(16, Common_Movement_Delay48)
-    waitmovement(0)
-    applymovement(16, GoldenrodCity_MagnusWalkToPlayer2)
-    waitmovement(0)
-    msgbox("You... You must be the kid who\nsaved the RADIO TOWER!\pMy name's MAGNUS. I'm Goldenrod\nCity's top scientist.\pAs a token of my gratitude, I'd like\nto give you my latest invention.\pSome POKéMON don't evolve until\nthey have been traded to another\ltrainer.\pWhen those POKéMON wear this\nLINKBRACELET, they should evolve\lon their own.\pPlease take it and try it out!", MSGBOX_DEFAULT)
-    giveitem(ITEM_LINK_BRACELET)
-    msgbox("I hope you put it to good use!", MSGBOX_DEFAULT)
-    applymovement(16, GoldenrodCity_MagnusWalkAwayFromPlayer2)
-    waitmovement(0)
-    turnobject(16, DIR_SOUTH)
-    savebgm(MUS_DUMMY)
-	fadedefaultbgm
-    release
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING2, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING3, 2)
-}
-script GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger3{
-    lock
-    applymovement(16, Common_Movement_ExclamationMark)
-    waitmovement(0)
-    playbgm(MUS_MOMS_THEME, 0)
-    applymovement (16, GoldenrodCity_MagnusWalkDown2)
-    waitmovement(0)
-    turnobject(16, DIR_WEST)
-    msgbox("Hey, you!")
-    closemessage
-    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight)
-    waitmovement(0)
-    applymovement(16, Common_Movement_Delay48)
-    waitmovement(0)
-    applymovement(16, GoldenrodCity_MagnusWalkToPlayer3)
-    waitmovement(0)
-    msgbox("You... You must be the kid who\nsaved the RADIO TOWER!\pMy name's MAGNUS. I'm Goldenrod\nCity's top scientist.\pAs a token of my gratitude, I'd like\nto give you my latest invention.\pSome POKéMON don't evolve until\nthey have been traded to another\ltrainer.\pWhen those POKéMON wear this\nLINKBRACELET, they should evolve\lon their own.\pPlease take it and try it out!", MSGBOX_DEFAULT)
-    giveitem(ITEM_LINK_BRACELET)
-    msgbox("I hope you put it to good use!", MSGBOX_DEFAULT)
-    applymovement(16, GoldenrodCity_MagnusWalkAwayFromPlayer3)
-    waitmovement(0)
-    turnobject(16, DIR_SOUTH)
-    savebgm(MUS_DUMMY)
-	fadedefaultbgm
-    release
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING2, 2)
-    setvar(VAR_GOLDENROD_MAGNUS_MEETING3, 2)
-}
-script GoldenrodCity_EventScript_Magnus {
-        msgbox("MAGNUS: Hi, {PLAYER}! Have you tried\nevolving any of your POKéMON with\lthe LINKBRACELET yet?", MSGBOX_NPC)
+    getplayerxy(VAR_TEMP_1, VAR_RESULT)
+    if(var(VAR_TEMP_1) == 5) {
+		applymovement (16, GoldenrodCity_MagnusWalkDown1)
     }
-movement GoldenrodCity_MagnusWalkDown1 {
-    walk_down * 2
+    if(var(VAR_TEMP_1) == 6) {
+		applymovement (16, GoldenrodCity_MagnusWalkDown2)
+    }
+    if(var(VAR_TEMP_1) == 7) {
+		applymovement (16, GoldenrodCity_MagnusWalkDown3)
+    }
+    waitmovement(0)
+    turnobject(16, DIR_WEST)
+    msgbox("Hey, you!")
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight)
+    waitmovement(0)
+    applymovement(16, Common_Movement_Delay48)
+    waitmovement(0)
+    if(var(VAR_TEMP_1) == 5) {
+		applymovement (16, GoldenrodCity_MagnusWalkToPlayer1)
+    }
+    if(var(VAR_TEMP_1) == 6) {
+		applymovement (16, GoldenrodCity_MagnusWalkToPlayer2)
+    }
+    if(var(VAR_TEMP_1) == 7) {
+		applymovement (16, GoldenrodCity_MagnusWalkToPlayer3)
+    }
+    waitmovement(0)
+    msgbox("You... You must be the kid who\nsaved the RADIO TOWER!\pMy name's MAGNUS. I'm Goldenrod\nCity's top scientist.\pAs a token of my gratitude, I'd like\nto give you my latest invention.\pSome POKéMON don't evolve until\nthey have been traded to another\ltrainer.\pWhen those POKéMON wear this\nLINKBRACELET, they should evolve\lon their own.\pPlease take it and try it out!", MSGBOX_DEFAULT)
+    giveitem(ITEM_LINK_BRACELET)
+    msgbox("I hope you put it to good use!", MSGBOX_DEFAULT)
+    if(var(VAR_TEMP_1) == 5) {
+		applymovement(16, GoldenrodCity_MagnusWalkAwayFromPlayer1)
+    }    
+    if(var(VAR_TEMP_1) == 6) {
+		applymovement (16, GoldenrodCity_MagnusWalkAwayFromPlayer2)
+    }
+    if(var(VAR_TEMP_1) == 7) {
+		applymovement (16, GoldenrodCity_MagnusWalkAwayFromPlayer3)
+    }
+    waitmovement(0)
+    turnobject(16, DIR_SOUTH)
+    savebgm(MUS_DUMMY)
+	fadedefaultbgm
+    release
+    setvar(VAR_GOLDENROD_MAGNUS_MEETING, 0)
 }
-movement GoldenrodCity_MagnusWalkDown2 {
-    walk_down
-}
-movement GoldenrodCity_MagnusWalkToPlayer {
-    walk_left * 4
-}
-movement GoldenrodCity_MagnusWalkToPlayer2 {
-    walk_left * 3
-}
-movement GoldenrodCity_MagnusWalkToPlayer3 {
-    walk_left * 5
-}
-movement GoldenrodCity_MagnusWalkAwayFromPlayer {
-    walk_right * 4
-    walk_up * 2
-}
-movement GoldenrodCity_MagnusWalkAwayFromPlayer2 {
-    walk_right * 3
-    walk_up
-}
-movement GoldenrodCity_MagnusWalkAwayFromPlayer3 {
-    walk_right * 5
-    walk_up
+
+script GoldenrodCity_EventScript_Magnus {
+    msgbox("MAGNUS: Hi, {PLAYER}! Have you tried\nevolving any of your POKéMON with\lthe LINKBRACELET yet?", MSGBOX_NPC)
 }
 
 script GoldenrodCity_EventScript_MagnetTrainStationSign {
@@ -414,3 +355,41 @@ script GoldenrodCity_EventScript_FlowerShopSign {
            "FLOWER SHOP", MSGBOX_SIGN)
 }
 
+movement GoldenrodCity_MagnusWalkDown1 {
+    walk_down
+}
+
+movement GoldenrodCity_MagnusWalkDown2 {
+    walk_down * 2
+}
+
+movement GoldenrodCity_MagnusWalkDown3 {
+    walk_down
+}
+
+movement GoldenrodCity_MagnusWalkToPlayer1 {
+    walk_left * 5
+}
+
+movement GoldenrodCity_MagnusWalkToPlayer2 {
+    walk_left * 4
+}
+
+movement GoldenrodCity_MagnusWalkToPlayer3 {
+    walk_left * 3
+}
+
+movement GoldenrodCity_MagnusWalkAwayFromPlayer1 {
+    walk_right * 5
+    walk_up
+}
+
+movement GoldenrodCity_MagnusWalkAwayFromPlayer2 {
+    walk_right * 4
+    walk_up * 2
+}
+
+movement GoldenrodCity_MagnusWalkAwayFromPlayer3 {
+    walk_right * 3
+    walk_up
+}

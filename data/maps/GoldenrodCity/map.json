@@ -395,18 +395,18 @@
       "x": 7,
       "y": 17,
       "elevation": 3,
-      "var": "VAR_GOLDENROD_MAGNUS_MEETING2",
+      "var": "VAR_GOLDENROD_MAGNUS_MEETING",
       "var_value": "1",
-      "script": "GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger2"
+      "script": "GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger"
     },
     {
       "type": "trigger",
       "x": 5,
       "y": 17,
       "elevation": 3,
-      "var": "VAR_GOLDENROD_MAGNUS_MEETING3",
+      "var": "VAR_GOLDENROD_MAGNUS_MEETING",
       "var_value": "1",
-      "script": "GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger3"
+      "script": "GoldenrodCity_EventScript_Magnus_Linkbracelet_Trigger"
     }
   ],
   "bg_events": [

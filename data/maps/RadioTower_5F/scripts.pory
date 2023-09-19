@@ -98,8 +98,6 @@ script RadioTower_5F_EventScript_FinalExecutiveTrigger{
     clearflag(FLAG_ROCKETS_IN_RADIO_TOWER)
     clearflag(FLAG_HIDE_MAGNUS)
     setvar(VAR_GOLDENROD_MAGNUS_MEETING, 1)
-	setvar(VAR_GOLDENROD_MAGNUS_MEETING2, 1)
-	setvar(VAR_GOLDENROD_MAGNUS_MEETING3, 1)
     removeobject(3)
     removeobject(4)
     setobjectxyperm(2, 0xFF, 0xFF)
