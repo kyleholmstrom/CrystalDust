@@ -1076,8 +1076,8 @@ static const struct MenuAction MultichoiceList_GameCornerTutor[] =
 
 static const struct MenuAction MultichoiceList_ModList[] = 
 {
-    {(const u8[])_("EXP. MODIFIER")},
-    {(const u8[])_("TYPE EFFECTIVENESS")},
+    {(const u8[])_("EXP. MOD")},
+    {(const u8[])_("TYPE EFFECT")},
     {(const u8[])_("CANCEL")},
 };
 

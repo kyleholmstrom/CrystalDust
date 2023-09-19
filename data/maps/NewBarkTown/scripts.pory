@@ -53,10 +53,10 @@ script NewBarkTown_EventScript_ElmsHouse{
 script NewBarkTown_EventScript_ModList{
     message("What would you like to do?")
     waitmessage
-    switch(var(VAR_MOD_LIST))
+    switch(var(VAR_TEMP_1))
     {
         case 0:
-            multichoicedefault(20, 6, MULTI_MOD_LIST, FALSE)
+            multichoicedefault(16, 6, MULTI_MOD_LIST, 0, FALSE)
     }
     switch(var(VAR_RESULT)) 
     {  
@@ -72,6 +72,7 @@ script NewBarkTown_EventScript_ModList{
     waitmessage
     goto(NewBarkTown_EventScript_EndModList)
 }
+
 
 script NewBarkTown_EventScript_Exp_Mod{
     message("Choose an Experience\nMultiplier.")
@@ -107,7 +108,7 @@ script NewBarkTown_EventScript_Exp_Mod{
             goto(NewBarkTown_EventScript_ModList)
     }
     waitmessage
-    goto(NewBarkTown_EventScript_EndModList)
+    goto(NewBarkTown_EventScript_ModList)
 }
 
 script NewBarkTown_EventScript_TypeEffect{
@@ -137,7 +138,7 @@ script NewBarkTown_EventScript_TypeEffect{
             goto(NewBarkTown_EventScript_ModList)
     }
     waitmessage
-    goto(NewBarkTown_EventScript_EndModList)
+    goto(NewBarkTown_EventScript_ModList)
 }
 
 script NewBarkTown_EventScript_EndModList{
