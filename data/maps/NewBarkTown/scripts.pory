@@ -50,6 +50,29 @@ script NewBarkTown_EventScript_ElmsHouse{
 	end
 }
 
+script NewBarkTown_EventScript_ModList{
+    message("What would you like to do?")
+    waitmessage
+    switch(var(VAR_MOD_LIST))
+    {
+        case 0:
+            multichoicedefault(20, 6, MULTI_MOD_LIST, FALSE)
+    }
+    switch(var(VAR_RESULT)) 
+    {  
+        case 0:
+            goto(NewBarkTown_EventScript_Exp_Mod)
+        case 1:
+            goto(NewBarkTown_EventScript_TypeEffect)
+        case 2:
+            goto(NewBarkTown_EventScript_EndModList)
+        case MULTI_B_PRESSED:
+            goto(NewBarkTown_EventScript_EndModList)
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_EndModList)
+}
+
 script NewBarkTown_EventScript_Exp_Mod{
     message("Choose an Experience\nMultiplier.")
     waitmessage
@@ -79,9 +102,9 @@ script NewBarkTown_EventScript_Exp_Mod{
             msgbox("Double experience is set.")
             setvar(VAR_EXP_MOD, 3)
         case 4:
-            goto(NewBarkTown_EventScript_EndModList)
+            goto(NewBarkTown_EventScript_ModList)
         case MULTI_B_PRESSED:
-            msgbox("No changes made.")
+            goto(NewBarkTown_EventScript_ModList)
     }
     waitmessage
     goto(NewBarkTown_EventScript_EndModList)
@@ -109,9 +132,9 @@ script NewBarkTown_EventScript_TypeEffect{
 					"not be displayed.")
 			setvar(VAR_TYPE_EFFECTIVENESS, 1)
         case 2:
-			goto(NewBarkTown_EventScript_EndModList)
+			goto(NewBarkTown_EventScript_ModList)
         case MULTI_B_PRESSED:
-            msgbox("No changes occurred.")
+            goto(NewBarkTown_EventScript_ModList)
     }
     waitmessage
     goto(NewBarkTown_EventScript_EndModList)

@@ -160,8 +160,9 @@
 #define MULTI_DOME_AMBER_ROOT_CLAW         149
 #define MULTI_HELIX_DOME_AMBER_ROOT_CLAW   150 
 #define MULTI_GAME_CORNER_TUTOR            151
-#define MULTI_EXP_MOD                      152
-#define MULTI_TYPE_EFFECT                  153
+#define MULTI_MOD_LIST                     152
+#define MULTI_EXP_MOD                      153
+#define MULTI_TYPE_EFFECT                  154
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
