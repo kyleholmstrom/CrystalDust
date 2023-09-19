@@ -156,7 +156,7 @@ script NewBarkTown_EventScript_PokeVial{
     {
         case 0:
 			msgbox("Pokevial is activated.")
-            giveitem(ITEM_POKEVIAL)
+            additem(ITEM_POKEVIAL)
 			setvar(VAR_POKEVIAL_MENU, 0)
         case 1:
 			msgbox("Pokevial is deactivated.")
