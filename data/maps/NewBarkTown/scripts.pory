@@ -65,6 +65,8 @@ script NewBarkTown_EventScript_ModList{
         case 1:
             goto(NewBarkTown_EventScript_TypeEffect)
         case 2:
+            goto(NewBarkTown_EventScript_PokeVial)
+        case 3:
             goto(NewBarkTown_EventScript_EndModList)
         case MULTI_B_PRESSED:
             goto(NewBarkTown_EventScript_EndModList)
@@ -72,7 +74,6 @@ script NewBarkTown_EventScript_ModList{
     waitmessage
     goto(NewBarkTown_EventScript_EndModList)
 }
-
 
 script NewBarkTown_EventScript_Exp_Mod{
     message("Choose an Experience\nMultiplier.")
@@ -132,6 +133,35 @@ script NewBarkTown_EventScript_TypeEffect{
 			msgbox("Type effectiveness will\n"
 					"not be displayed.")
 			setvar(VAR_TYPE_EFFECTIVENESS, 1)
+        case 2:
+			goto(NewBarkTown_EventScript_ModList)
+        case MULTI_B_PRESSED:
+            goto(NewBarkTown_EventScript_ModList)
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_ModList)
+}
+
+script NewBarkTown_EventScript_PokeVial{
+    message("Choose PokeVial setting.")
+    waitmessage
+    switch(var(VAR_POKEVIAL_MENU))
+    {
+        case 0:
+            multichoicedefault(20, 6, MULTI_POKEVIAL, 0, FALSE)
+        case 1:
+            multichoicedefault(20, 6, MULTI_POKEVIAL, 1, FALSE)
+    }
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+			msgbox("Pokevial is activated.")
+            giveitem(ITEM_POKEVIAL)
+			setvar(VAR_POKEVIAL_MENU, 0)
+        case 1:
+			msgbox("Pokevial is deactivated.")
+            removeitem(ITEM_POKEVIAL)
+			setvar(VAR_POKEVIAL_MENU, 1)
         case 2:
 			goto(NewBarkTown_EventScript_ModList)
         case MULTI_B_PRESSED:

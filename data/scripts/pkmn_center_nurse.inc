@@ -67,6 +67,7 @@ EventScript_PkmnCenterNurse_TakeAndHealPkmn::
     applymovement VAR_0x800B, Common_Movement_WalkInPlaceFastestDown
     waitmovement 0
     special HealPlayerParty
+    setvar VAR_POKEVIAL_USAGES, 0
     return
 
 EventScript_PkmnCenterNurse_CheckTrainerHillAndUnionRoom::

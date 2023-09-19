@@ -1078,6 +1078,7 @@ static const struct MenuAction MultichoiceList_ModList[] =
 {
     {(const u8[])_("EXP. MOD")},
     {(const u8[])_("TYPE EFFECT")},
+    {(const u8[])_("POKEVIAL")},
     {(const u8[])_("CANCEL")},
 };
 
@@ -1091,6 +1092,13 @@ static const struct MenuAction MultichoiceList_ExpMod[] =
 };
 
 static const struct MenuAction MultichoiceList_TypeEffect[] = 
+{
+    {(const u8[])_("ON")},
+    {(const u8[])_("OFF")},
+    {(const u8[])_("CANCEL")},
+};
+
+static const struct MenuAction MultichoiceList_PokeVial[] = 
 {
     {(const u8[])_("ON")},
     {(const u8[])_("OFF")},
@@ -1265,6 +1273,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_MOD_LIST]                   = MULTICHOICE(MultichoiceList_ModList),
     [MULTI_EXP_MOD]                    = MULTICHOICE(MultichoiceList_ExpMod),
     [MULTI_TYPE_EFFECT]                = MULTICHOICE(MultichoiceList_TypeEffect),
+    [MULTI_POKEVIAL]                   = MULTICHOICE(MultichoiceList_PokeVial),
 };
 
 const u8 *const gStdStrings[] =

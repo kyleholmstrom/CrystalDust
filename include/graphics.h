@@ -4027,6 +4027,8 @@ extern const u32 gItemIcon_SlowpokeTail[];
 extern const u32 gItemIconPalette_SlowpokeTail[];
 extern const u32 gItemIcon_LinkBracelet[];
 extern const u32 gItemIconPalette_LinkBracelet[];
+extern const u32 gItemIcon_PokeVial[];
+extern const u32 gItemIconPalette_PokeVial[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u32 gItemIconPalette_ReturnToFieldArrow[];

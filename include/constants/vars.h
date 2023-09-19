@@ -268,8 +268,8 @@
 #define VAR_UNUSED_0x40F7                    0x40F7 // Unused Var
 #define VAR_EXP_MOD                          0x40F8
 #define VAR_TYPE_EFFECTIVENESS               0x40F9
-#define VAR_UNUSED_0x40FA                    0x40FA // Unused Var
-#define VAR_UNUSED_0x40FB                    0x40FB // Unused Var
+#define VAR_POKEVIAL_USAGES                  0x40FA
+#define VAR_POKEVIAL_MENU                    0x40FB
 #define VAR_UNUSED_0x40FC                    0x40FC // Unused Var
 #define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
 #define VAR_UNUSED_0x40FE                    0x40FE // Unused Var

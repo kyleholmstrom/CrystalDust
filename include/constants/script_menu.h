@@ -163,6 +163,7 @@
 #define MULTI_MOD_LIST                     152
 #define MULTI_EXP_MOD                      153
 #define MULTI_TYPE_EFFECT                  154
+#define MULTI_POKEVIAL                     155
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0

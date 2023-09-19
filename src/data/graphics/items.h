@@ -820,3 +820,6 @@ const u32 gItemIconPalette_SlowpokeTail[] = INCBIN_U32("graphics/items/icon_pale
 
 const u32 gItemIcon_LinkBracelet[] = INCBIN_U32("graphics/items/icons/link_bracelet.4bpp.lz");
 const u32 gItemIconPalette_LinkBracelet[] = INCBIN_U32("graphics/items/icon_palettes/link_bracelet.gbapal.lz");
+
+const u32 gItemIcon_PokeVial[] = INCBIN_U32("graphics/items/icons/pokevial.4bpp.lz");
+const u32 gItemIconPalette_PokeVial[] = INCBIN_U32("graphics/items/icon_palettes/pokevial.gbapal.lz");
