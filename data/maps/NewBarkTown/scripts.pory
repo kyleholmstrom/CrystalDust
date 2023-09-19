@@ -94,9 +94,9 @@ script NewBarkTown_EventScript_TypeEffect{
     switch(var(VAR_TYPE_EFFECTIVENESS))
     {
         case 0:
-            multichoicedefault(20, 3, MULTI_TYPE_EFFECT, 0, FALSE)
+            multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 0, FALSE)
         case 1:
-            multichoicedefault(20, 3, MULTI_TYPE_EFFECT, 1, FALSE)
+            multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 1, FALSE)
     }
     switch (var(VAR_RESULT))
     {
