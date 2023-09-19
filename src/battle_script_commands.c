@@ -3273,13 +3273,11 @@ static void Cmd_getexp(void)
             }
 
             calculatedExp = gBaseStats[gBattleMons[gBattlerFainted].species].expYield * gBattleMons[gBattlerFainted].level / 7;
-            if (VarGet(VAR_EXP_MOD) == EXP_HALF){
-                calculatedExp = calculatedExp / 2;}
-            if (VarGet(VAR_EXP_MOD) == EXP_NORMAL){
-                calculatedExp = calculatedExp * 1;}   
-            if (VarGet(VAR_EXP_MOD) == EXP_ONEANDHALF){
+            if (VarGet(VAR_EXP_MOD) == 1){
+                calculatedExp = calculatedExp / 2;}  
+            if (VarGet(VAR_EXP_MOD) == 2){
                 calculatedExp = calculatedExp * 1.5;}         
-            if (VarGet(VAR_EXP_MOD) == EXP_DOUBLE){
+            if (VarGet(VAR_EXP_MOD) == 3){
                 calculatedExp = calculatedExp * 2;}
 
             if (viaExpShare) // at least one mon is getting exp via exp share

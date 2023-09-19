@@ -68,24 +68,51 @@ script NewBarkTown_EventScript_Exp_Mod{
     {  
         case 0:
             msgbox("Half experience is set.")
-            setvar(VAR_EXP_MOD, 1) 
+            setvar(VAR_EXP_MOD, 1)
         case 1:
             msgbox("Normal experience is set.")
-            setvar(VAR_EXP_MOD, 0)   
+            setvar(VAR_EXP_MOD, 0)
         case 2:
             msgbox("One-and-a-half experience is set.")
             setvar(VAR_EXP_MOD, 2)
         case 3:
             msgbox("Double experience is set.")
             setvar(VAR_EXP_MOD, 3)
+        case 4:
+            goto(NewBarkTown_EventScript_EndModList)
         case MULTI_B_PRESSED:
             msgbox("No changes made.")
     }
     waitmessage
-    goto(NewBarkTown_EventScript_EndExpMod)
+    goto(NewBarkTown_EventScript_EndModList)
 }
 
-script NewBarkTown_EventScript_EndExpMod{
+script NewBarkTown_EventScript_TypeEffect{
+    message("Show Type Effectiveness\n"
+             "in battle?")
+    waitmessage
+    multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 0, FALSE)
+    else
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+			msgbox("Type effectiveness will\n"
+					"be displayed.")
+			setflag(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW)
+        case 1:
+			msgbox("Type effectiveness will\n"
+					"not be displayed.")
+			clearflag(FLAG_TYPE_EFFECTIVENESS_BATTLE_SHOW)
+        case 2:
+			goto(NewBarkTown_EventScript_EndModList)
+        case MULTI_B_PRESSED:
+            msgbox("No changes occurred.")
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_EndModList)
+}
+
+script NewBarkTown_EventScript_EndModList{
 	msgbox("Goodbye!", MSGBOX_SIGN)
 	end
 }
