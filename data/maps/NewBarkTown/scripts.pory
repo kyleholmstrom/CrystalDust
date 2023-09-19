@@ -92,7 +92,6 @@ script NewBarkTown_EventScript_TypeEffect{
              "in battle?")
     waitmessage
     multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 0, FALSE)
-    else
     switch (var(VAR_RESULT))
     {
         case 0:
