@@ -510,8 +510,9 @@
 #define ITEM_SLOWPOKE_TAIL 406
 #define ITEM_LINK_BRACELET 407
 #define ITEM_POKEVIAL 408
+#define ITEM_CLEANSE_TAG_PLUS 409
 
-#define ITEMS_COUNT 409
+#define ITEMS_COUNT 410
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // Range of berries given out by various NPCS

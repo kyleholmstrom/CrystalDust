@@ -1194,7 +1194,7 @@ static void ApplyFluteEncounterRateMod(u32 *encRate)
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
     if (FlagGet(FLAG_CLEANSE_TAG_PLUS)){
-        if (CheckBagHasItem(ITEM_CLEANSE_TAG_PLUS)){
+        if (CheckBagHasItem(ITEM_CLEANSE_TAG_PLUS, 1)){
             *encRate = 0;
             return;
         }

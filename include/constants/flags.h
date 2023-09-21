@@ -741,10 +741,10 @@
 #define FLAG_UNUSED_0x2B5  0x2B5 // Unused Flag
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
-#define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
 
-#define FLAG_CLEANSE_TAG_PLUS    0x2B9
-#define FLAG_HIDE_MAGNUS         0x2BA
+#define FLAG_GOT_CLEANSE_TAG_PLUS  0x2B8
+#define FLAG_CLEANSE_TAG_PLUS      0x2B9
+#define FLAG_HIDE_MAGNUS           0x2BA
 
 #define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
 

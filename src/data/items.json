@@ -3057,22 +3057,6 @@
       "secondaryId": 0
     },
     {
-      "english": "CLEANSE TAG+",
-      "itemId": "ITEM_CLEANSE_TAG_PLUS",
-      "price": 0,
-      "holdEffect": "HOLD_EFFECT_NONE",
-      "holdEffectParam": 0,
-      "description_english": "Repels all wild POKéMON when in use.",
-      "importance": 0,
-      "exitsBagOnUse": 0,
-      "pocket": "POCKET_KEY_ITEMS",
-      "type": 2,
-      "fieldUseFunc": "ItemUseOutOfBattle_CleanseTagPlus",
-      "battleUsage": 0,
-      "battleUseFunc": "NULL",
-      "secondaryId": 0
-    },
-    {
       "english": "SOUL DEW",
       "itemId": "ITEM_SOUL_DEW",
       "price": 200,
@@ -6609,7 +6593,7 @@
       "price": 0,
       "holdEffect": "HOLD_EFFECT_NONE",
       "holdEffectParam": 6,
-      "description_english": "Use to heal party\\nReplenishes at POKéMON Centers.",
+      "description_english": "Use to heal party up to 6 times.\\nReplenishes at POKéMON Centers.",
       "importance": 2,
       "exitsBagOnUse": 0,
       "pocket": "POCKET_KEY_ITEMS",
@@ -6618,6 +6602,22 @@
       "battleUsage": 0,
       "battleUseFunc": "NULL",
       "secondaryId": 0
-    }    
+    },
+    {
+      "english": "CLEANSE TAG+",
+      "itemId": "ITEM_CLEANSE_TAG_PLUS",
+      "price": 0,
+      "holdEffect": "HOLD_EFFECT_NONE",
+      "holdEffectParam": 0,
+      "description_english": "Repels all wild POKéMON when\\nin use.",
+      "importance": 0,
+      "exitsBagOnUse": 0,
+      "pocket": "POCKET_KEY_ITEMS",
+      "type": 2,
+      "fieldUseFunc": "ItemUseOutOfBattle_CleanseTagPlus",
+      "battleUsage": 0,
+      "battleUseFunc": "NULL",
+      "secondaryId": 0
+    }  
   ]
 }

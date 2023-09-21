@@ -51,9 +51,9 @@ script NewBarkTown_EventScript_ElmsHouse{
 }
 
 script NewBarkTown_EventScript_ModList{
-    message("What would you like to do?")
+    message("What would you like\nto do?")
     waitmessage
-    multichoicedefault(16, 6, MULTI_MOD_LIST, 0, FALSE)
+    multichoicedefault(16, 3, MULTI_MOD_LIST, 0, FALSE)
     switch(var(VAR_RESULT)) 
     {  
         case 0:
@@ -210,9 +210,9 @@ script NewBarkTown_EventScript_PokeVial{
 }
 
 script NewBarkTown_EventScript_CleanseTag{
-    message("Choose CLEANSE TAG options.")
+    message("Choose CLEANSE TAG\noptions.")
     waitmessage
-    multichoicedefault(20, 6, MULTI_CLEANSE_TAG, 0, FALSE)
+    multichoicedefault(18, 6, MULTI_CLEANSE_TAG, 0, FALSE)
     switch (var(VAR_RESULT))
     {
         case 0:
@@ -266,9 +266,9 @@ script NewBarkTown_EventScript_DeNerfCleanseTag{
 }
 
 script NewBarkTown_EventScript_CleanseTagPlus{
-    message("Choose CLEANSE TAG+ settings.")
+    message("Choose CLEANSE TAG+\nsettings.")
     waitmessage
-    switch(var(CLEANSE_TAG_PLUS))
+    switch(var(VAR_CLEANSE_TAG_PLUS))
     {
         case 0:
             multichoicedefault(20, 6, MULTI_ON_OFF, 1, FALSE)
@@ -283,29 +283,29 @@ script NewBarkTown_EventScript_CleanseTagPlus{
                 waitmessage
                 goto(NewBarkTown_EventScript_DeNerfCleanseTag)
             }
-            if(var(CLEANSE_TAG_PLUS) == 1){
+            if(var(VAR_CLEANSE_TAG_PLUS) == 1){
                 msgbox("CLEANSE TAG+ is\nalready activated.")
                 waitmessage
                 goto(NewBarkTown_EventScript_CleanseTagPlus)
             }
 			msgbox("CLEANSE TAG+ is activated.\nAdded to KEY ITEMS.")
             additem(ITEM_CLEANSE_TAG_PLUS)
-            setflag(FLAG_CLEANSE_TAG_PLUS)
-			setvar(CLEANSE_TAG_PLUS, 1)
+            setflag(FLAG_GOT_CLEANSE_TAG_PLUS)
+			setvar(VAR_CLEANSE_TAG_PLUS, 1)
         case 1:
-            if(var(VAR_POKEVIAL_MENU) == 0){
+            if(var(VAR_CLEANSE_TAG_PLUS) == 0){
                 msgbox("CLEANSE TAG+ is\nalready deactivated.")
                 waitmessage
                 goto(NewBarkTown_EventScript_CleanseTagPlus)
             }
 			msgbox("CLEANSE TAG+ is deactivated.\nRemoved from KEY ITEMS.")
             removeitem(ITEM_CLEANSE_TAG_PLUS)
-            clearflag(FLAG_CLEANSE_TAG_PLUS)
-			setvar(CLEANSE_TAG_PLUS, 0)
+            clearflag(FLAG_GOT_CLEANSE_TAG_PLUS)
+			setvar(VAR_CLEANSE_TAG_PLUS, 0)
         case 2:
-			goto(NewBarkTown_EventScript_ModList)
+			goto(NewBarkTown_EventScript_CleanseTag)
         case MULTI_B_PRESSED:
-            goto(NewBarkTown_EventScript_ModList)
+            goto(NewBarkTown_EventScript_CleanseTag)
     }
     waitmessage
     goto(NewBarkTown_EventScript_CleanseTag)

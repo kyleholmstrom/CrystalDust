@@ -1102,7 +1102,7 @@ static const struct MenuAction MultichoiceList_OnOff[] =
 static const struct MenuAction MultichoiceList_CleanseTag[] = 
 {
     {(const u8[])_("DE-NERF")},
-    {(const u8[])_("CLEANSE TAG+")},
+    {(const u8[])_("CLNSTAG+")},
     {(const u8[])_("CANCEL")},
 };
 

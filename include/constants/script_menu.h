@@ -162,8 +162,11 @@
 #define MULTI_GAME_CORNER_TUTOR            151
 #define MULTI_MOD_LIST                     152
 #define MULTI_EXP_MOD                      153
-#define MULTI_TYPE_EFFECT                  154
+#define MULTI_ON_OFF                       154
 #define MULTI_POKEVIAL                     155
+#define MULTI_CLEANSE_TAG                  156
+#define MULTI_YES_NO2                      157
+
 
 // Lilycove SS Tidal Multichoice Selections
 #define SSTIDAL_SELECTION_SLATEPORT        0
