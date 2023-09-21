@@ -51,6 +51,7 @@ script NewBarkTown_EventScript_ElmsHouse{
 }
 
 script NewBarkTown_EventScript_ModList{
+    textcolor(MSG_COLOR_BLACK)
     message("What would you like\nto do?")
     waitmessage
     multichoicedefault(16, 3, MULTI_MOD_LIST, 0, FALSE)
@@ -74,6 +75,7 @@ script NewBarkTown_EventScript_ModList{
 }
 
 script NewBarkTown_EventScript_Exp_Mod{
+    textcolor(MSG_COLOR_BLACK)
     message("Choose an EXPERIENCE\nMULTIPLIER.")
     waitmessage
     switch(var(VAR_EXP_MOD))
@@ -91,34 +93,42 @@ script NewBarkTown_EventScript_Exp_Mod{
     {  
         case 0:
             if (var(VAR_EXP_MOD) == 1){
-                msgbox("0.5x EXPERIENCE is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("0.5x EXPERIENCE is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_Exp_Mod)
             }
+            textcolor(MSG_COLOR_BLACK)
             msgbox("0.5x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 1)
         case 1:
             if (var(VAR_EXP_MOD) == 0){
-                msgbox("1.0x EXPERIENCE is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("1.0x EXPERIENCE is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_Exp_Mod)
             }
+            textcolor(MSG_COLOR_BLACK)
             msgbox("1.0x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 0)
         case 2:
             if (var(VAR_EXP_MOD) == 2){
-                msgbox("1.5x EXPERIENCE is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("1.5x EXPERIENCE is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_Exp_Mod)
             }
+            textcolor(MSG_COLOR_BLACK)
             msgbox("1.5x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 2)
         case 3:
             if (var(VAR_EXP_MOD) == 3){
-                msgbox("2.0x EXPERIENCE is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("2.0x EXPERIENCE is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_Exp_Mod)
             }
+            textcolor(MSG_COLOR_BLACK)
             msgbox("2.0x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 3)
         case 4:
@@ -131,6 +141,7 @@ script NewBarkTown_EventScript_Exp_Mod{
 }
 
 script NewBarkTown_EventScript_TypeEffect{
+    textcolor(MSG_COLOR_BLACK)
     message("Choose TYPE EFFECTIVENESS\n"
              "setting.")
     waitmessage
@@ -145,19 +156,23 @@ script NewBarkTown_EventScript_TypeEffect{
     {
         case 0:
             if (var(VAR_TYPE_EFFECTIVENESS) == 1){
-                msgbox("TYPE EFFECTIVENESS is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("TYPE EFFECTIVENESS is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_TypeEffect)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("TYPE EFFECTIVENESS is\n"
 					"activated.")
 			setvar(VAR_TYPE_EFFECTIVENESS, 1)
         case 1:
             if (var(VAR_TYPE_EFFECTIVENESS) == 0){
-                msgbox("TYPE EFFECTIVENESS is\nalready deactivated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("TYPE EFFECTIVENESS is\nalready deactivated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_TypeEffect)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("TYPE EFFECTIVENESS is\n"
 					"deactivated.")
 			setvar(VAR_TYPE_EFFECTIVENESS, 0)
@@ -171,6 +186,7 @@ script NewBarkTown_EventScript_TypeEffect{
 }
 
 script NewBarkTown_EventScript_PokeVial{
+    textcolor(MSG_COLOR_BLACK)
     message("Choose POKéVIAL setting.")
     waitmessage
     switch(var(VAR_POKEVIAL_MENU))
@@ -184,19 +200,23 @@ script NewBarkTown_EventScript_PokeVial{
     {
         case 0:
             if(var(VAR_POKEVIAL_MENU) == 1){
-                msgbox("POKéVIAL is already\nactivated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("POKéVIAL is already\nactivated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_PokeVial)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("POKéVIAL is activated.\nAdded to KEY ITEMS.")
             additem(ITEM_POKEVIAL)
 			setvar(VAR_POKEVIAL_MENU, 1)
         case 1:
             if(var(VAR_POKEVIAL_MENU) == 0){
-                msgbox("POKéVIAL is already\ndeactivated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("POKéVIAL is already\ndeactivated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_PokeVial)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("POKéVIAL is deactivated.\nRemoved from KEY ITEMS.")
             removeitem(ITEM_POKEVIAL)
 			setvar(VAR_POKEVIAL_MENU, 0)
@@ -210,6 +230,7 @@ script NewBarkTown_EventScript_PokeVial{
 }
 
 script NewBarkTown_EventScript_CleanseTag{
+    textcolor(MSG_COLOR_BLACK)
     message("Choose CLEANSE TAG\noptions.")
     waitmessage
     multichoicedefault(18, 6, MULTI_CLEANSE_TAG, 0, FALSE)
@@ -229,6 +250,7 @@ script NewBarkTown_EventScript_CleanseTag{
 }
 
 script NewBarkTown_EventScript_DeNerfCleanseTag{
+    textcolor(MSG_COLOR_BLACK)
     message("De-Nerf CLEANSE TAG?")
     waitmessage
     switch(var(VAR_DENERF_CLEANSE_TAG))
@@ -242,18 +264,22 @@ script NewBarkTown_EventScript_DeNerfCleanseTag{
     {
         case 0:
             if(var(VAR_DENERF_CLEANSE_TAG) == 1){
-                msgbox("De-Nerfed CLEANSE TAG\nis already activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("De-Nerfed CLEANSE TAG\nis already activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_DeNerfCleanseTag)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("De-Nerfed CLEANSE TAG\nis activated.")
 			setvar(VAR_DENERF_CLEANSE_TAG, 1)
         case 1:
             if(var(VAR_DENERF_CLEANSE_TAG) == 0){
-                msgbox("Standard CLEANSE TAG is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("Standard CLEANSE TAG is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_DeNerfCleanseTag)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("Standard CLEANSE TAG is\nactivated.")
 			setvar(VAR_DENERF_CLEANSE_TAG, 0)
         case 2:
@@ -266,6 +292,7 @@ script NewBarkTown_EventScript_DeNerfCleanseTag{
 }
 
 script NewBarkTown_EventScript_CleanseTagPlus{
+    textcolor(MSG_COLOR_BLACK)
     message("Choose CLEANSE TAG+\nsettings.")
     waitmessage
     switch(var(VAR_CLEANSE_TAG_PLUS))
@@ -279,25 +306,30 @@ script NewBarkTown_EventScript_CleanseTagPlus{
     {
         case 0:
             if(flag(FLAG_GOT_CLEANSE_TAG)){
+                textcolor(MSG_COLOR_RED)
                 msgbox("Can't add CLEANSE TAG+. Please\nedit De-Nerf settings instead.")
                 waitmessage
                 goto(NewBarkTown_EventScript_DeNerfCleanseTag)
             }
             if(var(VAR_CLEANSE_TAG_PLUS) == 1){
-                msgbox("CLEANSE TAG+ is\nalready activated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("CLEANSE TAG+ is\nalready activated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_CleanseTagPlus)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("CLEANSE TAG+ is activated.\nAdded to KEY ITEMS.")
             additem(ITEM_CLEANSE_TAG_PLUS)
             setflag(FLAG_GOT_CLEANSE_TAG_PLUS)
 			setvar(VAR_CLEANSE_TAG_PLUS, 1)
         case 1:
             if(var(VAR_CLEANSE_TAG_PLUS) == 0){
-                msgbox("CLEANSE TAG+ is\nalready deactivated.")
+                textcolor(MSG_COLOR_RED)
+                msgbox("CLEANSE TAG+ is\nalready deactivated!")
                 waitmessage
                 goto(NewBarkTown_EventScript_CleanseTagPlus)
             }
+            textcolor(MSG_COLOR_BLACK)
 			msgbox("CLEANSE TAG+ is deactivated.\nRemoved from KEY ITEMS.")
             removeitem(ITEM_CLEANSE_TAG_PLUS)
             clearflag(FLAG_GOT_CLEANSE_TAG_PLUS)
