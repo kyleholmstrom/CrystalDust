@@ -8,7 +8,7 @@ script Route5_House_EventScript_Woman{
 script Route5_House_EventScript_OldWoman{
     if(flag(FLAG_GOT_CLEANSE_TAG_PLUS))
     {
-        msgbox("Eeyaaaah!\pI sense you already have a CLEANSE TAG.\nYou are well protected.", MSGBOX_NPC)
+        msgbox("Eeyaaaah!\pI sense you already have a CLEANSE\nTAG. You are well protected.", MSGBOX_NPC)
         end
     }
     if(flag(FLAG_GOT_CLEANSE_TAG))
