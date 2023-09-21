@@ -31,7 +31,7 @@
 #include "constants/songs.h"
 #include "constants/species.h"
 #include "constants/weather.h"
-
+#include "item.h"
 
 extern const u8 EventScript_RepelWoreOff[];
 
@@ -1193,8 +1193,26 @@ static void ApplyFluteEncounterRateMod(u32 *encRate)
 
 static void ApplyCleanseTagEncounterRateMod(u32 *encRate)
 {
-    if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
-        *encRate = *encRate * 2 / 3;
+    if (FlagGet(FLAG_CLEANSE_TAG_PLUS)){
+        if (CheckBagHasItem(ITEM_CLEANSE_TAG_PLUS)){
+            *encRate = 0;
+            return;
+        }
+        FlagClear(FLAG_CLEANSE_TAG_PLUS);
+    }
+    if (VarGet(VAR_DENERF_CLEANSE_TAG) == 1){
+        int i;
+        for (i = 0; i < PARTY_SIZE; i++){
+            if (GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG_PLUS){
+                *encRate = 0;
+                break;
+            }
+        }
+    }
+    else {
+        if (GetMonData(&gPlayerParty[0], MON_DATA_HELD_ITEM) == ITEM_CLEANSE_TAG)
+            *encRate = *encRate * 2 / 3;
+    }
 }
 
 // double encounter rate in long grass

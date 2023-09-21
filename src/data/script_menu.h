@@ -1078,7 +1078,8 @@ static const struct MenuAction MultichoiceList_ModList[] =
 {
     {(const u8[])_("EXP. MOD")},
     {(const u8[])_("TYPE EFFECT")},
-    {(const u8[])_("POKEVIAL")},
+    {(const u8[])_("POKéVIAL")},
+    {(const u8[])_("CLEANSE TAG")},
     {(const u8[])_("CANCEL")},
 };
 
@@ -1091,17 +1092,24 @@ static const struct MenuAction MultichoiceList_ExpMod[] =
     {(const u8[])_("CANCEL")},
 };
 
-static const struct MenuAction MultichoiceList_TypeEffect[] = 
+static const struct MenuAction MultichoiceList_OnOff[] = 
 {
     {(const u8[])_("ON")},
     {(const u8[])_("OFF")},
     {(const u8[])_("CANCEL")},
 };
 
-static const struct MenuAction MultichoiceList_PokeVial[] = 
+static const struct MenuAction MultichoiceList_CleanseTag[] = 
 {
-    {(const u8[])_("ON")},
-    {(const u8[])_("OFF")},
+    {(const u8[])_("DE-NERF")},
+    {(const u8[])_("CLEANSE TAG+")},
+    {(const u8[])_("CANCEL")},
+};
+
+static const struct MenuAction MultichoiceList_YesNo2[] = 
+{
+    {(const u8[])_("YES")},
+    {(const u8[])_("NO")},
     {(const u8[])_("CANCEL")},
 };
 
@@ -1272,8 +1280,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_GAME_CORNER_TUTOR]          = MULTICHOICE(MultichoiceList_GameCornerTutor),
     [MULTI_MOD_LIST]                   = MULTICHOICE(MultichoiceList_ModList),
     [MULTI_EXP_MOD]                    = MULTICHOICE(MultichoiceList_ExpMod),
-    [MULTI_TYPE_EFFECT]                = MULTICHOICE(MultichoiceList_TypeEffect),
-    [MULTI_POKEVIAL]                   = MULTICHOICE(MultichoiceList_PokeVial),
+    [MULTI_ON_OFF]                     = MULTICHOICE(MultichoiceList_OnOff),
+    [MULTI_CLEANSE_TAG]                = MULTICHOICE(MultichoiceList_CleanseTag),
+    [MULTI_YES_NO2]                    = MULTICHOICE(MultichoiceList_YesNo2),
 };
 
 const u8 *const gStdStrings[] =

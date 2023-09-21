@@ -53,11 +53,7 @@ script NewBarkTown_EventScript_ElmsHouse{
 script NewBarkTown_EventScript_ModList{
     message("What would you like to do?")
     waitmessage
-    switch(var(VAR_TEMP_1))
-    {
-        case 0:
-            multichoicedefault(16, 6, MULTI_MOD_LIST, 0, FALSE)
-    }
+    multichoicedefault(16, 6, MULTI_MOD_LIST, 0, FALSE)
     switch(var(VAR_RESULT)) 
     {  
         case 0:
@@ -67,6 +63,8 @@ script NewBarkTown_EventScript_ModList{
         case 2:
             goto(NewBarkTown_EventScript_PokeVial)
         case 3:
+            goto(NewBarkTown_EventScript_CleanseTag)
+        case 4:
             goto(NewBarkTown_EventScript_EndModList)
         case MULTI_B_PRESSED:
             goto(NewBarkTown_EventScript_EndModList)
@@ -76,7 +74,7 @@ script NewBarkTown_EventScript_ModList{
 }
 
 script NewBarkTown_EventScript_Exp_Mod{
-    message("Choose an Experience\nMultiplier.")
+    message("Choose an EXPERIENCE\nMULTIPLIER.")
     waitmessage
     switch(var(VAR_EXP_MOD))
     {
@@ -92,16 +90,36 @@ script NewBarkTown_EventScript_Exp_Mod{
     switch(var(VAR_RESULT)) 
     {  
         case 0:
-            msgbox("Half experience is set.")
+            if (var(VAR_EXP_MOD) == 1){
+                msgbox("0.5x EXPERIENCE is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_Exp_Mod)
+            }
+            msgbox("0.5x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 1)
         case 1:
-            msgbox("Normal experience is set.")
+            if (var(VAR_EXP_MOD) == 0){
+                msgbox("1.0x EXPERIENCE is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_Exp_Mod)
+            }
+            msgbox("1.0x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 0)
         case 2:
-            msgbox("One-and-a-half experience is set.")
+            if (var(VAR_EXP_MOD) == 2){
+                msgbox("1.5x EXPERIENCE is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_Exp_Mod)
+            }
+            msgbox("1.5x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 2)
         case 3:
-            msgbox("Double experience is set.")
+            if (var(VAR_EXP_MOD) == 3){
+                msgbox("2.0x EXPERIENCE is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_Exp_Mod)
+            }
+            msgbox("2.0x EXPERIENCE is\nactivated.")
             setvar(VAR_EXP_MOD, 3)
         case 4:
             goto(NewBarkTown_EventScript_ModList)
@@ -113,26 +131,36 @@ script NewBarkTown_EventScript_Exp_Mod{
 }
 
 script NewBarkTown_EventScript_TypeEffect{
-    message("Choose Type Effectiveness\n"
+    message("Choose TYPE EFFECTIVENESS\n"
              "setting.")
     waitmessage
     switch(var(VAR_TYPE_EFFECTIVENESS))
     {
         case 0:
-            multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 0, FALSE)
+            multichoicedefault(20, 6, MULTI_ON_OFF, 1, FALSE)
         case 1:
-            multichoicedefault(20, 6, MULTI_TYPE_EFFECT, 1, FALSE)
+            multichoicedefault(20, 6, MULTI_ON_OFF, 0, FALSE)
     }
     switch (var(VAR_RESULT))
     {
         case 0:
-			msgbox("Type effectiveness will\n"
-					"be displayed.")
-			setvar(VAR_TYPE_EFFECTIVENESS, 0)
-        case 1:
-			msgbox("Type effectiveness will\n"
-					"not be displayed.")
+            if (var(VAR_TYPE_EFFECTIVENESS) == 1){
+                msgbox("TYPE EFFECTIVENESS is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_TypeEffect)
+            }
+			msgbox("TYPE EFFECTIVENESS is\n"
+					"activated.")
 			setvar(VAR_TYPE_EFFECTIVENESS, 1)
+        case 1:
+            if (var(VAR_TYPE_EFFECTIVENESS) == 0){
+                msgbox("TYPE EFFECTIVENESS is\nalready deactivated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_TypeEffect)
+            }
+			msgbox("TYPE EFFECTIVENESS is\n"
+					"deactivated.")
+			setvar(VAR_TYPE_EFFECTIVENESS, 0)
         case 2:
 			goto(NewBarkTown_EventScript_ModList)
         case MULTI_B_PRESSED:
@@ -143,25 +171,35 @@ script NewBarkTown_EventScript_TypeEffect{
 }
 
 script NewBarkTown_EventScript_PokeVial{
-    message("Choose PokeVial setting.")
+    message("Choose POKéVIAL setting.")
     waitmessage
     switch(var(VAR_POKEVIAL_MENU))
     {
         case 0:
-            multichoicedefault(20, 6, MULTI_POKEVIAL, 0, FALSE)
+            multichoicedefault(20, 6, MULTI_ON_OFF, 1, FALSE)
         case 1:
-            multichoicedefault(20, 6, MULTI_POKEVIAL, 1, FALSE)
+            multichoicedefault(20, 6, MULTI_ON_OFF, 0, FALSE)
     }
     switch (var(VAR_RESULT))
     {
         case 0:
-			msgbox("Pokevial is activated.")
+            if(var(VAR_POKEVIAL_MENU) == 1){
+                msgbox("POKéVIAL is already\nactivated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_PokeVial)
+            }
+			msgbox("POKéVIAL is activated.\nAdded to KEY ITEMS.")
             additem(ITEM_POKEVIAL)
-			setvar(VAR_POKEVIAL_MENU, 0)
-        case 1:
-			msgbox("Pokevial is deactivated.")
-            removeitem(ITEM_POKEVIAL)
 			setvar(VAR_POKEVIAL_MENU, 1)
+        case 1:
+            if(var(VAR_POKEVIAL_MENU) == 0){
+                msgbox("POKéVIAL is already\ndeactivated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_PokeVial)
+            }
+			msgbox("POKéVIAL is deactivated.\nRemoved from KEY ITEMS.")
+            removeitem(ITEM_POKEVIAL)
+			setvar(VAR_POKEVIAL_MENU, 0)
         case 2:
 			goto(NewBarkTown_EventScript_ModList)
         case MULTI_B_PRESSED:
@@ -169,6 +207,108 @@ script NewBarkTown_EventScript_PokeVial{
     }
     waitmessage
     goto(NewBarkTown_EventScript_ModList)
+}
+
+script NewBarkTown_EventScript_CleanseTag{
+    message("Choose CLEANSE TAG options.")
+    waitmessage
+    multichoicedefault(20, 6, MULTI_CLEANSE_TAG, 0, FALSE)
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+			goto(NewBarkTown_EventScript_DeNerfCleanseTag)
+        case 1:
+			goto(NewBarkTown_EventScript_CleanseTagPlus)
+        case 2:
+			goto(NewBarkTown_EventScript_ModList)
+        case MULTI_B_PRESSED:
+            goto(NewBarkTown_EventScript_ModList)
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_ModList)
+}
+
+script NewBarkTown_EventScript_DeNerfCleanseTag{
+    message("De-Nerf CLEANSE TAG?")
+    waitmessage
+    switch(var(VAR_DENERF_CLEANSE_TAG))
+    {
+        case 0:
+            multichoicedefault(20, 6, MULTI_YES_NO2, 1, FALSE)
+        case 1:
+            multichoicedefault(20, 6, MULTI_YES_NO2, 0, FALSE)
+    }
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+            if(var(VAR_DENERF_CLEANSE_TAG) == 1){
+                msgbox("De-Nerfed CLEANSE TAG\nis already activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_DeNerfCleanseTag)
+            }
+			msgbox("De-Nerfed CLEANSE TAG\nis activated.")
+			setvar(VAR_DENERF_CLEANSE_TAG, 1)
+        case 1:
+            if(var(VAR_DENERF_CLEANSE_TAG) == 0){
+                msgbox("Standard CLEANSE TAG is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_DeNerfCleanseTag)
+            }
+			msgbox("Standard CLEANSE TAG is\nactivated.")
+			setvar(VAR_DENERF_CLEANSE_TAG, 0)
+        case 2:
+			goto(NewBarkTown_EventScript_CleanseTag)
+        case MULTI_B_PRESSED:
+            goto(NewBarkTown_EventScript_CleanseTag)
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_CleanseTag)
+}
+
+script NewBarkTown_EventScript_CleanseTagPlus{
+    message("Choose CLEANSE TAG+ settings.")
+    waitmessage
+    switch(var(CLEANSE_TAG_PLUS))
+    {
+        case 0:
+            multichoicedefault(20, 6, MULTI_ON_OFF, 1, FALSE)
+        case 1:
+            multichoicedefault(20, 6, MULTI_ON_OFF, 0, FALSE)
+    }
+    switch (var(VAR_RESULT))
+    {
+        case 0:
+            if(flag(FLAG_GOT_CLEANSE_TAG)){
+                msgbox("Can't add CLEANSE TAG+. Please\nedit De-Nerf settings instead.")
+                waitmessage
+                goto(NewBarkTown_EventScript_DeNerfCleanseTag)
+            }
+            if(var(CLEANSE_TAG_PLUS) == 1){
+                msgbox("CLEANSE TAG+ is\nalready activated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_CleanseTagPlus)
+            }
+			msgbox("CLEANSE TAG+ is activated.\nAdded to KEY ITEMS.")
+            additem(ITEM_CLEANSE_TAG_PLUS)
+            setflag(FLAG_CLEANSE_TAG_PLUS)
+			setvar(CLEANSE_TAG_PLUS, 1)
+        case 1:
+            if(var(VAR_POKEVIAL_MENU) == 0){
+                msgbox("CLEANSE TAG+ is\nalready deactivated.")
+                waitmessage
+                goto(NewBarkTown_EventScript_CleanseTagPlus)
+            }
+			msgbox("CLEANSE TAG+ is deactivated.\nRemoved from KEY ITEMS.")
+            removeitem(ITEM_CLEANSE_TAG_PLUS)
+            clearflag(FLAG_CLEANSE_TAG_PLUS)
+			setvar(CLEANSE_TAG_PLUS, 0)
+        case 2:
+			goto(NewBarkTown_EventScript_ModList)
+        case MULTI_B_PRESSED:
+            goto(NewBarkTown_EventScript_ModList)
+    }
+    waitmessage
+    goto(NewBarkTown_EventScript_CleanseTag)
 }
 
 script NewBarkTown_EventScript_EndModList{

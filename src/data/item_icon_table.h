@@ -434,6 +434,7 @@ const u32 *const gItemIconTable[][2] =
     [ITEM_SLOWPOKE_TAIL] = {gItemIcon_SlowpokeTail, gItemIconPalette_SlowpokeTail},
     [ITEM_LINK_BRACELET] = {gItemIcon_LinkBracelet, gItemIconPalette_LinkBracelet},
     [ITEM_POKEVIAL] = {gItemIcon_PokeVial, gItemIconPalette_PokeVial},
+    [ITEM_CLEANSE_TAG_PLUS] = {gItemIcon_CleanseTag, gItemIconPalette_CleanseTag},
     // Return to field arrow
     [ITEM_FIELD_ARROW] = {gItemIcon_ReturnToFieldArrow, gItemIconPalette_ReturnToFieldArrow},
 };

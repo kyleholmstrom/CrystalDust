@@ -270,8 +270,8 @@
 #define VAR_TYPE_EFFECTIVENESS               0x40F9
 #define VAR_POKEVIAL_USAGES                  0x40FA
 #define VAR_POKEVIAL_MENU                    0x40FB
-#define VAR_UNUSED_0x40FC                    0x40FC // Unused Var
-#define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
+#define VAR_DENERF_CLEANSE_TAG               0x40FC
+#define VAR_CLEANSE_TAG_PLUS                 0x40FD
 #define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                    0x40FF // Unused Var
 
